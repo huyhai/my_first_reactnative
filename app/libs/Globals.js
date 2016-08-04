@@ -1,0 +1,25 @@
+module.exports = {
+  TIME_TAMP: '',
+  BASE_URL: 'https://mapi.hotdeal.vn/rest',
+  COLOR: {
+    ORANGE: '#C50',
+    DARKBLUE: '#0F3274',
+    LIGHTBLUE: '#6EA8DA',
+    DARKGRAY: '#999',
+  },
+  API : "api",
+  SIG :"sig",
+  DEVICE : "device",
+  APPVER : "appVersion",
+  PRIVATE_KEY : "hd_android_2015_10_22",
+  TS:"ts",
+  STATEID : "stateId",
+  APIVER : "apiVersion",
+  APPVERVALUE : "1.0",
+  TEXTSIZESMALL : 9,
+  TEXTSIZESMALL_MEDIUM : 11,
+  TEXTSIZEMEDIUM : 13,
+  TEXTSIZEMEDIUM_LARGE : 15,
+  DEVICE_WIDTH : 0,
+  DEVICE_HEIGHT : 0
+};

@@ -1,0 +1,9 @@
+danh sach libs su dung trong app
+https://www.npmjs.com/package/react-native-easy-rating(set image resizeMode="stretch" trong libs)
+
+https://github.com/iodine/react-native-drawer-layout
+
+--
+- enable https trong ios de chay dc link https, them vao file info.plist:
+    <key>NSAllowsArbitraryLoads</key>
+    <true/>
