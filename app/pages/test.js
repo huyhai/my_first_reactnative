@@ -8,6 +8,7 @@ import {
 
 } from 'react-native';
 import Storage from '../libs/Storage';
+import Mytext from '../libs/MyTextView.js';
 var age1=1;
 let UID123_object = {name: 'Chris', age: age1, traits: {hair: 'brown', eyes: 'brown'}};
 
@@ -21,12 +22,12 @@ class Test extends Component {
 
   render(){
     return(
-      <View style={{flex:1, paddingTop:50}}>
+      <View style={{flex:1,flexDirection:"column",justifyContent:'center',alignItems:'center'}}>
         <TouchableOpacity onPress={() => this.handlePress()}>
-          <Text numberOfLines={2}>
-          heheheheeheheh
+          <Text numberOfLines={4}>
+            {this.props.av}
           </Text>
-          </TouchableOpacity>
+        </TouchableOpacity>
       </View>
     );
 

@@ -7,6 +7,7 @@ import {
 
 import Util from '../libs/Util.js';
 import MainContent from './MainContent.js';
+import MainDemo from './MainDemo.js';
 
 class Splash extends Component {
 
@@ -17,7 +18,7 @@ class Splash extends Component {
  choosenLocation() {
    this.props.navigator.push({
      name: 'main',
-     component: MainContent,
+     component: MainDemo,
      passProps: {username: 'fuck'},
    });
  }

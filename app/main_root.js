@@ -8,7 +8,7 @@ import {
 } from 'react-native';
 console.disableYellowBox = true;
 import Splash from './pages/splash.js';
-
+import Util from './libs/Util.js';
 
 let tempNavigator;
 let isRemoved = false;
@@ -26,13 +26,13 @@ class App extends Component {
   }
 
   configureScene() {
-      // return Navigator.SceneConfigs.FloatFromRight;
-    return Navigator.SceneConfigs.PushFromRight;
+      return Navigator.SceneConfigs.FloatFromRight;
+    // return Navigator.SceneConfigs.PushFromRight;
   }
 
   renderScene(route, navigator) {
     // let Component = route.component;
-    // tempNavigator = navigator;
+
     // if (route.name === 'WebViewPage') {
     //   BackAndroid.removeEventListener('hardwareBackPress', this.goBack);
     //   isRemoved = true;
@@ -44,6 +44,7 @@ class App extends Component {
     // return (
     //   <Component navigator={navigator} route={route} />
     // );
+    tempNavigator = navigator;
     if (route.component) {
       return React.createElement(route.component, { ...this.props, ...route.passProps, navigator, route});
     }

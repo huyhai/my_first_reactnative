@@ -36,7 +36,7 @@ class Util{
     return height / layoutSize;
   }
   static naviGoBack(navigator) {
-    if (navigator && navigator.getCurrentRoutes().length > 1) {
+    if (navigator && navigator.getCurrentRoutes().length > 2) {
       navigator.pop();
       return true;
     }

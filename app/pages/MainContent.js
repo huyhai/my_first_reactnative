@@ -32,19 +32,21 @@ class MainContent extends Component {
     return arr;
   }
 
-  componentWillMount(){
+  componentWillMount() {
     Storage.get('text')
       .then((text) => {
         if(null==text){
-                console.log('null');
+          console.log('null');
           Storage.save('text', UID123_object);
         }
         console.log('dkm '+text);
-          text.forEach(function(entry) {
+
+        this.text.forEach(function(entry) {
             console.log(entry.name);
         }, this);
 
-      });
+  });
+
     // Storage.save('text', vvv);
 
   //  alert("POST " +typeof arr);
@@ -103,11 +105,11 @@ class MainContent extends Component {
 
 
   constructor(props) {
-   super(props);
-   var ds = new ListView.DataSource({
+    super(props);
+    var ds = new ListView.DataSource({
          rowHasChanged: (row1, row2) => row1 !== row2,
-     });
-     this.state = {
+    });
+    this.state = {
         dataSource: ds.cloneWithRows([]),
         starCount: 3.5,
         drawerLockMode:'unlocked',
@@ -128,11 +130,11 @@ class MainContent extends Component {
 
   _handlePress(item){
     // console.log(typeof arr)
-
     this.props.navigator.push({
       name: 'g',
       component: Test,
-      passProps: {av: arr},
+    //  passProps: {av: arr},
+        passProps: {av: item.name},
     });
       // this.props.navigator.pop();
   }
@@ -147,8 +149,8 @@ class MainContent extends Component {
     //   "POST",
     //   "Response Body -> " + getTextSize(GLOBAL.TEXTSIZEMEDIUM)+" a= "+GLOBAL.DEVICE_WIDTH
     // )
-
-console.log(item.image);
+//source={{uri: "http://img.v3.news.zdn.vn/w660/Uploaded/rohuouj/2016_08_18/bi_thu_Yen_Bai_bi_ban_zing.jpg"}}
+//console.log(item.image);
     return (
       <View style={styles.row}>
         <View style={styles.rowleft}>
@@ -195,7 +197,7 @@ console.log(item.image);
             </View>
             <View style={styles.rowstar}>
               <Image
-                resizeMode='stretch'
+                resizeMode='contain'
                 style={styles.nguoimua}
                 source={require('../img/ic_nguoimua.png')}>
               </Image>
@@ -380,7 +382,6 @@ var styles = StyleSheet.create({
     alignItems:"center"
   },
   rowstar1: {
-
     flexDirection:"row",
     // justifyContent:"center"
     // alignItems:"center",
