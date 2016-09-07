@@ -15,6 +15,7 @@ class CustomView extends Component {
   render() {
     return (
       <View style={{flex: 1, flexDirection: 'column', justifyContent: 'center',alignItems:'center'}}>
+
         <Mytext text='DEMO react-native' mau='red'/>
         <Mytext text='this is a texttttt' mau='blue'/>
         <Mytext text='DEMO react-native' mau='red'/>

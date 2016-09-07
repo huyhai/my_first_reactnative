@@ -13,12 +13,32 @@ class AutoLayout extends Component {
 
   render() {
     return (
-      <View>
+      <View style={{flex:1, flexDirection:"column"}}>
+       <View style={{flex:1, flexDirection:"row"}}>
        <Image
           resizeMode='stretch'
-          style={{width:Util.setWidth(1) , height:Util.setHeight(1)}}
+          style={{width:Util.setWidth(2) , height:Util.setHeight(2)}}
           source={require('../img/hinh.jpg')}
        />
+       <Image
+          resizeMode='stretch'
+          style={{width:Util.setWidth(2) , height:Util.setHeight(2)}}
+          source={require('../img/hinh.jpg')}
+       />
+        </View>
+        <View style={{flex:1, flexDirection:"row"}}>
+        <Image
+           resizeMode='stretch'
+           style={{width:Util.setWidth(2) , height:Util.setHeight(2)}}
+           source={require('../img/hinh.jpg')}
+        />
+        <Image
+           resizeMode='stretch'
+           style={{width:Util.setWidth(2) , height:Util.setHeight(2)}}
+           source={require('../img/hinh.jpg')}
+        />
+         </View>
+
      </View>
     );
   }

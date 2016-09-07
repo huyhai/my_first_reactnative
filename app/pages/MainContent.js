@@ -154,7 +154,7 @@ class MainContent extends Component {
     return (
       <View style={styles.row}>
         <View style={styles.rowleft}>
-          <Image  source={{uri: item.image}}
+          <Image  source={{uri: "http://img.v3.news.zdn.vn/w1024/Uploaded/fsmqv/2016_09_06/lo8_zing.jpg"}}
                   style={{flex:1}} />
         </View>
         <View style={styles.rowright}>
